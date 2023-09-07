@@ -1,44 +1,47 @@
-
 :root {
     --background: #16161a;
     --secondary: #3f4044;
     --tertiary: #2cb67d;
-    --button: #7f5af0;
+    --primary-color: #7f5af0;
     --paragraph: #94a1b2;
     --title: #fffffe;
 }
+
 body {
     box-sizing: border-box;
     margin: 0;
-    padding: 0; 
+    padding: 0;
     background: linear-gradient(-90deg, #2aa7a0, #2d9660, #19254d);
     background-size: 250% 250%;
     animation: gradient 8s alternate infinite;
     height: 100%;
     width: 100%;
-    font-family: sans-serif;  
+    font-family: sans-serif;
 }
+
 @keyframes gradient {
     0% {
-      background-position: 0%;
+        background-position: 0%;
     }
     100% {
-      background-position: 100%;
+        background-position: 100%;
     }
 }
+
 h2 {
     color: var(--title);
     font-size: 3rem;
     text-shadow: 3px 3px 0 var(--background);
 }
-/*///////////////////PARALLAX/////////////////*/
+
+/* PARALLAX */
 .parallax {
     background: var(--background) fixed no-repeat 50% 50%;
     background-image: url('./assets/software.png');
     background-size: cover;
 }
 
-/*///////////////////NAVBAR///////////////////*/
+/* NAVBAR */
 .header-container {
     position: fixed;
     width: 100%;
@@ -52,6 +55,7 @@ h2 {
     color: var(--paragraph);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
 .logo {
     display: flex;
     gap: 1rem;
@@ -59,41 +63,48 @@ h2 {
     padding-left: 4rem;
     font-size: 1.5rem;
 }
+
 .menu-container {
     display: flex;
 }
+
 .menu-list {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
+
 .menu-list a {
     text-decoration: none;
     color: var(--paragraph);
 }
+
 .abrir-menu, .cerrar-menu {
     display: none;
     height: fit-content;
     align-self: center;
 }
 
-/*///////////////////PRESENTATION///////////////////*/
+/* PRESENTATION */
 .presentation {
     display: flex;
     flex-direction: column;
     padding: 3.3rem 1rem;
 }
+
 .presentation h1 {
     margin: 7rem 0 0.5rem 0;
     color: var(--title);
     font-size: 3rem;
     text-shadow: 3px 3px 0 var(--background);
 }
+
 .presentation p {
     color: var(--title);
     font-size: 1.5rem;
     text-shadow: 1.5px 1.5px 0 var(--background);
 }
+
 .action-button {
     text-decoration: none;
     color: var(--background);
@@ -105,18 +116,22 @@ h2 {
     cursor: pointer;
     align-self: flex-end;
 }
-/*///////////////////SERVICES///////////////////*/
+
+/* SERVICES */
 .services {
     padding: 1rem;
     box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
 }
+
 .services div {
     display: flex;
     gap: 1rem;
 }
+
 .services h2 {
     margin-top: 7rem;
 }
+
 .service-card {
     border-radius: 6px;
     background-color: var(--secondary);
@@ -127,19 +142,23 @@ h2 {
     display: flex;
     flex-direction: column;
 }
+
 .service-card h3 {
     color: var(--title);
 }
+
 .service-card p {
     color: var(--paragraph);
 }
-/*///////////////////ABOUT///////////////////*/
+
+/* ABOUT */
 .about {
     padding: 1rem;
     font-size: 1.2rem;
     color: var(--background);
     font-weight: bold;
 }
+
 .about-box {
     margin-top: 7rem;
     margin-bottom: 8rem;
@@ -148,30 +167,24 @@ h2 {
     padding: 0.5rem 1rem 1rem 1rem;
     box-shadow: rgba(14, 30, 37, 1) 0px 2px 4px 0px, rgba(14, 30, 37, 0.8) 0px 2px 16px 0px;
 }
-/*///////////////////WORK///////////////////*/
+
+/* WORK */
 .work {
     padding: 1rem;
 }
+
 .work div {
     display: flex;
     gap: 1rem;
 }
+
 .work h2 {
     margin-top: 7rem;
 }
-/* .work-card {
-    border: 2px solid var(--button);
-    border-radius: 6px;
-    background-color: var(--background);
-    color: var(--text);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-} */
-/*///////////////////FORM///////////////////*/
+
+/* FORM */
 .form-container {
     padding: 10rem 1rem 2.2rem 1rem;
-    
 }
 
 .form {
@@ -180,33 +193,36 @@ h2 {
     gap: 1rem;
     border-radius: 6px;
     background-color: var(--tertiary);
-    color: var(--text);
+    color: var(--paragraph);
     padding: 1rem;
     margin-bottom: 1rem;
     font-size: 1.2rem;
     box-shadow: rgba(14, 30, 37, 1) 0px 2px 4px 0px, rgba(14, 30, 37, 0.8) 0px 2px 16px 0px;
 }
+
 .form input {
     padding: 0.5rem 1rem;
 }
+
 .form button {
     width: fit-content;
     align-self: center;
     padding: 0.5rem 1rem;
     border-radius: 6px;
-    background-color: var(--button);
+    background-color: var(--primary-color);
 }
-/*///////////////////FOOTER///////////////////*/
+
+/* FOOTER */
 footer {
     background-color: var(--background);
     font-size: 1rem;
     color: var(--paragraph);
     padding: 1rem;
 }
-/*///////////////////////MEDIA QUERIS///////////////////*/
+
+/* MEDIA QUERIES */
 @media (max-width: 735px) {
-    
-    /*----------------Menu----------------*/
+    /* Menu */
     .abrir-menu, .cerrar-menu {
         display: block;
         border: 0;
@@ -215,6 +231,7 @@ footer {
         color: var(--backgroundMain);
         cursor: pointer;
     }
+
     .menu-container {
         opacity: 0;
         visibility: hidden;
@@ -226,29 +243,35 @@ footer {
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
         font-size: 1.5rem;
     }
+
     .menu-container.visible {
         opacity: 1;
         visibility: visible;
     }
+
     .menu-list {
         flex-direction: column;
         align-items: center;
         padding: 40px 60px;
     }
-    /*----------------Presentation----------------*/
+
+    /* Presentation */
     .presentation {
-        padding: 8rem  1rem 20rem 1rem;
+        padding: 8rem 1rem 20rem 1rem;
         align-items: center;
     }
+
     .presentation a {
         margin-top: 10rem;
         align-self: center;
     }
-    /*----------------Services----------------*/
+
+    /* Services */
     .services div {
         flex-direction: column;
     }
-    /*----------------Work----------------*/
+
+    /* Work */
     .work div {
         flex-direction: column;
     }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo">
+            <img src="./static/assets/vite.svg" alt="Logo DevSolutions">
+            <p>DevSolutions</p>
+        </div>
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav id='menu' class="menu-container">
+            <ul class="menu-list">
+                <button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button>
+                <li><a href='#home'>Inicio</a></li>
+                <li><a href='#services'>Servicios</a></li>
+                <li><a href='#about'>Acerca de</a></li>
+                <li><a href='#work'>Trabajo</a></li>
+                <li><a href='#contact'>Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contact" class="form-container parallax">
+        <form class="form" action="/contact" method="post">
+            <h2>Contáctanos</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required placeholder="Escribe tu correo electrónico">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit" class="action-button">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2023 DevSolutions. Todos los derechos reservados.</p>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>
